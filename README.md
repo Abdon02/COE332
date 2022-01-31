@@ -1,0 +1,1 @@
+This repository will contain files and other things concerning this class. Much more to come!
