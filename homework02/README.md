@@ -1,18 +1,18 @@
 # README.md file concerning the files: 'hw02_part1.py' and 'hw02_part2.py'
 
-## The purpose of hw02_part1.py script is to create a dictionary, with data points of meteorite sites. 
-## After gathering the data for 5 differnt meteorite sites, I created a JSON file. The JSON file is named
-## 'meteorite.json' once 'hw02_part1.py' is compiled.
+   The purpose of hw02_part1.py script is to create a dictionary, with data points of meteorite sites. 
+   After gathering the data for 5 differnt meteorite sites, I created a JSON file. The JSON file is named
+   'meteorite.json' once 'hw02_part1.py' is compiled.
 
-## The purpose of hw02_part2.py script is to read the JSON file that was created from 'hw02_part1.py.
-## Given a starting point of the rover, (16.0, 82.0) the rover is instructed to travel to the different 
-## meterorite sites based on the order in the JSON file. Depending on the 'composition' of the meteorite
-## it would take the rover an (x) amount of time to sample and move on to the next meteorite site. After
-## gathering all that time travel from one site to another site, we would calculate the total time it 
-## takes for the rover to visit and acquire a sample for each site. 
+   The purpose of hw02_part2.py script is to read the JSON file that was created from 'hw02_part1.py.
+   Given a starting point of the rover, (16.0, 82.0) the rover is instructed to travel to the different 
+   meterorite sites based on the order in the JSON file. Depending on the 'composition' of the meteorite
+   it would take the rover an (x) amount of time to sample and move on to the next meteorite site. After
+   gathering all that time travel from one site to another site, we would calculate the total time it 
+   takes for the rover to visit and acquire a sample for each site. 
 
-# Function/dictionary information for 'hw02_part1.py' and 'hw02_part2.py'
-## 'hw02_part1.py' functions and other information:
+
+# 'hw02_part1.py' functions and other information:
 ### 1.- def element_of_meteorite_composition(mete_comp_list):
      In this function is picks a number between 0 and 2 (inclusive) and depending on what random number
      is chosen. It will return that element from the argument (type list) 'mete_comp_list' to the key 
@@ -24,7 +24,7 @@
      longitude is randomly generated within the bounds of 82.0 and 84.0. And the value of composition 
      is determined by the function element_of_meteorite_composition().
 
-## 'hw02_part2.py' functions and other information:
+# 'hw02_part2.py' functions and other information:
 ### 1.- def calc_gcd(latitude_1: float, longitude_1: float, latitude_2: float, longitude_2: float):
      This function calculates and returnsthe total distance the rove has to travel from 
      (latitude_1, longitude_1) to (latitude_2, longitude_2).
