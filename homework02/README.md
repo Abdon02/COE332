@@ -1,4 +1,4 @@
-# README.md file concerning the files: 'hw02_part1.py' and 'hw02_part2.py'
+# README.md file concerns the files: 'hw02_part1.py' and 'hw02_part2.py'
 
    The purpose of hw02_part1.py script is to create a dictionary, with data points of meteorite sites. 
    After gathering the data for 5 differnt meteorite sites, I created a JSON file. The JSON file is named
@@ -10,6 +10,11 @@
    it would take the rover an (x) amount of time to sample and move on to the next meteorite site. After
    gathering all that time travel from one site to another site, we would calculate the total time it 
    takes for the rover to visit and acquire a sample for each site. 
+
+   To sum it up, you first need to compile 'hw02_part1.py" in order to create the JSON file. The file
+   'hw02_part2.py' will read the JSON file and gather data on how long it took the rover to travel to 
+   different sites and gather samples from each site. The information will be displayed in a table for 
+   the user to understand the information much better.
 
 
 # 'hw02_part1.py' functions and other information:
