@@ -27,7 +27,8 @@ def calculate_turbidity(list_of_dict: List[dict], cali_key: str, detc_cur_key: s
                                into a floating number.
         dectector_current_key (str): This is a string that will be used to get the data from the 
                                      dictionaries. This is the "key" value.
-
+        num_of_recent_recordings (int): This a int value that signifies how many recent dat points
+                                        does it want to analyze to calculate the Turbidity
     Returns: 
         turbidity (float): The avaerage turbidity values from the last 5 recent data points
     """
