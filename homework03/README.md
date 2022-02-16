@@ -4,8 +4,9 @@
   file that contains the water data. This data will be used in to find the turbidity and the time it will take
   for the water to be in the "safe" level for water consumption.
 
-  To download the JSOPN file, follow these steps: \n
+  To download the JSOPN file, follow these steps:
+  ___
   1.- Go to the directory where you want this file to be
-  2.- copy and paste this into your terminal: 
-      wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json
+  2.- copy and paste this into your terminal:
+  wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json
   *The data get updated every day, so the results may vary when it is time to make calculations*
