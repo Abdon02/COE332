@@ -68,6 +68,6 @@ This function tests to make sure that the function 'is_water_safe()' returns a b
 different scenarios with different turbidity readings. Finally, it tested when the argument was not inputted as a 
 floating number, and raised an error
 
-###3.- def test_time():
+### 3.- def test_time():
 This function tests to make sure that the return value from the function 'required_time_for_turbidity_to_go_under_threshold()', is a floating number. It also tests the hours returned from the function for differt turbidity readings.
 Finally, it tests what would happen if a string argument was passed into the function instead of a flaoting number.
