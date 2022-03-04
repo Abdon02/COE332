@@ -25,6 +25,8 @@ def compute_average_mass(a_list_of_dicts: List[dict], a_key_string: str) -> floa
     """
     if (len(a_list_of_dicts) == 0):
         logging.error('a list of dicts is empty')
+
+
     total_mass = 0.
     for item in a_list_of_dicts:
         total_mass += float(item[a_key_string])
@@ -50,7 +52,6 @@ def check_hemisphere(latitude: float, longitude: float) -> str:
     location = f'{location} & Eastern' if (longitude > 0) else f'{location} & Western'
     return(location)
 
-
 def count_classes(a_list_of_dicts: List[dict], a_key_string: str) -> dict:
     """
     Iterates through a list of dictionaries, and pulls out the value associated
@@ -65,8 +66,8 @@ def count_classes(a_list_of_dicts: List[dict], a_key_string: str) -> dict:
 
     Returns:
         classes_observed (dict): Dictionary of class counts.
-
     """
+    
     classes_observed = {}
     for item in a_list_of_dicts:
         if item[a_key_string] in classes_observed:
@@ -114,11 +115,13 @@ def main():
     print('There were', S_W, 'meteors found in the Southern & Western quadrant\n')
     
 
-    #This is to test the count classes function
+    #This is to test the count classes function, 
     print('Class summary data: ')
-    dict = count_classes(ml_data['meteorite_landings'], 'recclass')
-    for item in dict:
-        print('The', item, 'class was found', dict[item], 'times')
+    dict2 = count_classes(ml_data['meteorite_landings'], 'recclass')
+
+    #loop through the keys, and printing out the values associated with it
+    for item in dict2:
+        print('The', item, 'class was found', dict2[item], 'times')
     print()
 
 if __name__ == '__main__':
