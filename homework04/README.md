@@ -107,7 +107,7 @@ The Docker Image, was built with the help of a Dockerfile. The Dockerfile contai
 - To run the Docker Image interactively with a user-provided data set found in the web use these commands:
     - To download the data set from the internet use this command:
         ```
-        wget (enter url of data)
+        wget https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json 
         ```
     - After downloading the data set, use this command to copy the data set into the folder "code" that is inside the container:
         ```
@@ -115,6 +115,6 @@ The Docker Image, was built with the help of a Dockerfile. The Dockerfile contai
         ```
     - Then you run and execute the ml_data_analysis.py file using the user-defined data using this command:
         ```
-        ./ml_data_analysis.py (user defined json file)
+        ./ml_data_analysis.py ML_Data_Sample.json
         ```
 
