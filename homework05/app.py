@@ -48,6 +48,12 @@ def load_meteorite_landings_data() -> str:
             #Querys the the start value from the URL address
             start = request.args.get('start', 0)
             
+            #Change the value of start to str
+            start = str(start)
+            
+            if (start == None):
+                return 'Make sure you input a value after "start" or make sure you included "start" in the URL'
+            
             #Checks if the value inputted is a number
             if not start.isnumeric():
                return 'Invalid start value, start must be numeric.\n'
