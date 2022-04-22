@@ -6,9 +6,9 @@ RUN yum update -y && \
 RUN pip3 install Flask==2.0.3 \
     	 	 redis==4.1.4
 
-COPY ML_Data_Sample.json /code/ML_Data_Sample.json
-COPY app.py /code/app.py
+COPY ML_Data_Sample.json /data/ML_Data_Sample.json
+COPY app.py /data/app.py
 
-WORKDIR /code/
+WORKDIR /data/
 
-CMD ["python3", "/code/app.py"]
+CMD ["python3", "/data/app.py"]
