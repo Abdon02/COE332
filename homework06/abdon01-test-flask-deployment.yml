@@ -25,6 +25,8 @@ spec:
           env:
           - name: FLASK_APP
             value: "app.py"
+          - name: REDIS_IP
+            value: "10.109.122.77"
           ports:
           - name: http
             containerPort: 5000
