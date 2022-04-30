@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import json
 import redis
 from typing import List
+import os
 
 app = Flask(__name__)
 
@@ -11,14 +12,17 @@ def load_meteorite_landings_data() -> str:
     '''
     This function will put Meteorite_landings_data into the redia server, or it will return the json
     file to the user.
+
     Args:
         None
+
     Returns:
         (string) it will return a string telling the user what task has been done, or if an error was
         committed and therefore it needs to be fixed.
     '''
     #Creating an object of redis
-    rd = redis.Redis(host ='172.17.0.21', port='6379', db = 0)    
+    redis_ip = os.environ.get('REDIS_IP')
+    rd = redis.Redis(host=redis_ip, port='6379', db = 0)    
     
     if(request.method == 'POST'):
         #This variable will have the json file
@@ -39,6 +43,7 @@ def load_meteorite_landings_data() -> str:
             do this command first:
             
             curl -X POST localhost:5036/data 
+
             then you can redo this GET command without any issues.\n
             '''
         else:
@@ -71,6 +76,7 @@ def load_meteorite_landings_data() -> str:
         for this function. Try again but instead you these commands:
         1.- If you want to upload the data into the data base use this:
             curl -X POST localhost:5036/data 
+
         2.- If you want to read the data out of the database and return it as a json list use this 
         command:
             curl -X GET localhost:5036/data
