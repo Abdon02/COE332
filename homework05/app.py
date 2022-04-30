@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import json
 import redis
 from typing import List
+import os
 
 app = Flask(__name__)
 
@@ -20,7 +21,8 @@ def load_meteorite_landings_data() -> str:
         committed and therefore it needs to be fixed.
     '''
     #Creating an object of redis
-    rd = redis.Redis(host ='172.17.0.21', port='6379', db = 0)    
+    redis_ip = os.environ.get('REDIS_IP')
+    rd = redis.Redis(host=redis_ip, port='6379', db = 0)    
     
     if(request.method == 'POST'):
         #This variable will have the json file
