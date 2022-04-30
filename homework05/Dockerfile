@@ -11,6 +11,6 @@ COPY app.py /data/app.py
 
 WORKDIR /data/
 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
 
 CMD ["app.py"]
