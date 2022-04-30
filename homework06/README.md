@@ -32,7 +32,7 @@ For this project, I reused the Dockerfile, app.py file from homework05. To add o
     - This .yml file creates creates a PVC object. With this object it mounts the PVC into the redis container. Incase the redis continer were to crash, the data would be saved inside this PVC. The deployment will create a new redis pod and the PVC will be mounted to the new redis container, holding all the previously. 
 - 5.- abdon01-test-redis-service.yml:
     - This .yml file creates a service that connects the redis pods together. It is important for the service to be listening to the port number 6379 since that is the port where redis listens to. 
-- 6.- pythondebug.yml
+- 6.- abdon01-pythondebug.yml
     - This .yml file was used to in order to "exec" inside the pod. Once you were inside the pod, you can test the different redis and flask pods to make sure that everything was working.
 
 
