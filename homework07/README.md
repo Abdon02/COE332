@@ -20,4 +20,5 @@
     - This main branch has two sub-branches "diameter/yes" and "diameter/no". With the first option, it will return to the user a list of all the diameters that are in the dataset. The second option, it will return a graph of all the diameters that are in the data set.
 3. orbit_id: 
     - This main branch has two sub-branches, "orbit_id/" and "orbit_id/name_id". With the first option it will return a list of all the orbit_ids that are in the dataset. The second option, it will return the orbit_id of the specific asteroid when the name_id is inputted.
+
 That was just a few of the routes, that will be implemented to the final project. And with the help of the daigram from above, visualizing all the parts will make everything easier.
