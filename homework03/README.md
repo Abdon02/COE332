@@ -1,4 +1,4 @@
-# README.md file concerns the files: 'hw03_part2.py' and 'test_hw03_part3.py'
+# Water samples of Mars
 
   Before I start talking about 'hw03_part2.py' and 'test_hw03_part3.py' it is important that we download the JSON
   file that contains the water data. This data will be used in to find the turbidity and the time it will take
@@ -6,6 +6,7 @@
 
 #### To download the JSON file follow these steps:
   ___
+  ```
   1.- Go to the directory where you want this file to be
 
   2.- copy and paste this into your terminal:
@@ -13,15 +14,12 @@
   wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json
 
   *The data get updated every day, so the results may vary when it is time to make calculations*
+  ```
+The purpose of 'hw03_part2.py' is to calculate the average Turbidity of the water from the last 5 recent recordings To calculate the Turbidity, you use this formula, T= a0 * I90, where T is Turbidity, a0 is the Calibration Constant, I90 is the Ninety degree dectector. To calculate the turbidity we will use the function 'calculate_turbidity()' where it will return a floating number.
 
-  
-The purpose of 'hw03_part2.py' is to calculate the average Turbidity of the water from the last 5 recent recordings To calculate the Turbidity, you use this formula, T= a0 * I90, where T is Turbidity, a0 is Calibration Constant, I90is the Ninety degree dectector. To calculate the turbidity we will use hte function 'calculate_turbidity()' where it will return a float number.
+There is a turbidity threshold, meaning that if the calculated turbidity is over the threshold it is not safe to use that water. If the turbidity is less than or equal to the Turbidity Threshold, then it is safe to use. We will use the function 'is_water_safe_to_drink()', where it will return a bool value, and will determine if it is safe or not to use the water.
 
-There is a turbidity threshold, meaning that if the turbidity that was calculated is over the threshold it is not safe to drink that water. If the turbidity is less than or equal to the Turbidity Threshold, then it is safe to consume. We will use the function 'is_water_safe_to_drink()', where it will return a bool value.
-
-If the turbidity makes the water unsafe to consume, then we calculate the amount of time (hours) it will take to bring the turbdity level under the threshold, using the function 'required_time_for_turbidity_to_go_under_threshold()'. That will return a float number. The time it takes the water to go under the threshold is calculated using this 
-formula. Ts > T0(1 - d)**b, where Ts is the turbidity threshold, T0 is the current turbidity level, d is the decay 
-rate per hour, and b is time (in hours).
+If the turbidity makes the water unsafe to use, then we calculate the amount of time (hours) it will take to bring the turbdity level under the threshold, using the function 'required_time_for_turbidity_to_go_under_threshold()'. The function will return a floating number that represents the time it will take for the water to go under the threshold. The formula to calculate the time is the following: Ts > T0(1-d)**b, where Ts is the turbidity threshold, T0 is the current turbidity level, d is the decay rate per hour, and b is time (in hours). 
 
 The purpose of 'test_hw03_part2.py' is to test the functions that were created in the script, 'hw03_part2.py'.
 By importing the functions, json, and pytest we are able to create and different functions to test the functions
