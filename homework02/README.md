@@ -1,4 +1,4 @@
-# README.md file concerns the files: 'hw02_part1.py' and 'hw02_part2.py'
+# Starting to work with JSON files
 
    The purpose of hw02_part1.py script is to create a dictionary, with data points of meteorite sites. 
    After gathering the data for 5 differnt meteorite sites, I created a JSON file. The JSON file is named
