@@ -21,7 +21,7 @@
 ### 1.- def element_of_meteorite_composition(mete_comp_list):
 In this function is picks a number between 0 and 2 (inclusive) and depending on what random number is chosen. It will return that element from the argument (type list) 'mete_comp_list' to the key value 'composition' for each meteorite site
 ### 2.- meteorite_dictionary
-In this directory, it has a key value called, 'sites' that is equal to a list of dictionaries. Each dictionary entry has information concering, "site_id", "latitude", "longitude", "composition". The value of latitude is randomly generated within the bounds of 16.0 and 18.0. The value of longitude is randomly generated within the bounds of 82.0 and 84.0. And the value of composition is determined by the function element_of_meteorite_composition().
+In this dictionary, it has a key value called, 'sites' that is equal to a list of dictionaries. Each dictionary entry has information concering, "site_id", "latitude", "longitude", "composition". The value of latitude is randomly generated within the bounds of 16.0 and 18.0. The value of longitude is randomly generated within the bounds of 82.0 and 84.0. And the value of composition is determined by the function element_of_meteorite_composition().
 # 'hw02_part2.py' functions and other information:
 ### 1.- def calc_gcd(latitude_1: float, longitude_1: float, latitude_2: float, longitude_2: float):
 This function calculates and returnsthe total distance the rove has to travel from (latitude_1, longitude_1) to (latitude_2, longitude_2).
